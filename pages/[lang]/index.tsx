@@ -123,7 +123,7 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
 
     <br-x />
     <b-200 style={{ backgroundColor: "#748EC5" }} onClick={async () => {
-      let json = await nexus.api({ "app": "digikala", cmd: "home" })
+      let json = await nexus.api({ "app": "digikala", cmd: "search", body:{query:"کفش نایک"} })
       alerter(json)
     }}>
       <f-12>دیجیکالا سرچ</f-12>
@@ -148,7 +148,7 @@ const Page: PageEl = (props, refresh, getProps, onConnected, dies, z) => {
     <br-x />
     <b-200 style={{ backgroundColor: "#748EC5" }} onClick={async () => {
       let json = await nexus.api({
-        "app": "chatgpt3.5", cmd: "prompt", body: {
+        "app": "chatgpt4o", cmd: "prompt", body: {
           prompts: [
             "assume yourself as shekspear and answer below question:",
             "what is your name and when were you born?"
